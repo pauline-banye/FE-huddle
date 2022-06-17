@@ -29,3 +29,56 @@ body {
     font-family: var(--ff-body);
     color: var(--very-dark-cyan);
 }
+
+.landing {
+    background-image: url(images/bg-hero-desktop.svg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--very-pale-cyan);
+    width: 100%;
+}
+
+.logo {
+
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.hero-section div {
+    flex: 1;
+}
+
+
+.col-2 img {
+    
+    width:50%;
+    height:100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* assign 50% to each of the child divs */
+.container div {
+    flex: 1;
+}
