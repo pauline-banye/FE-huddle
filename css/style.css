@@ -244,6 +244,11 @@ footer .container {
     margin-top: 25px;
 }
 
+.first-col {
+    margin-bottom: 40px;
+}
+
+
 .first-col .logo {
     width: 200px;
 }
@@ -272,13 +277,26 @@ footer .container {
     font-weight: var(--fw-reg);
 }
 
-.third-col,
+.third-col li,
+.second-col li {
+    margin-top: 20px;
+}
+
+.third-col a,
+.second-col a {
+    color: var(--very-pale-cyan);
+}
+
+.third-col {
+    margin-bottom: 20px;
+}
+
 .second-col {
     margin-top: 20px;
 }
 
 .col-socials {
-
+    margin-top: 50px;
 }
 
 .fa-stack-2x {
