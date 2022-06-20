@@ -15,7 +15,7 @@
     --grayish-blue: hsl(208, 11%, 55%);
 
     --light: white;
-    --shadow: -2px 2px 20px 5px #0000001f;
+    --shadow: -1px 2px 10px 1px #4242421f;
 
     --fs-body: 18px;
 }
@@ -85,13 +85,25 @@ ul {
     border: none;
     font-weight: var(--fw-bold);
     font-size: 11px;
-    color: var(--light)
+    color: var(--light);
+    transition: 0.3s;
+}
+
+.btn-hero:hover,
+.btn:hover {
+    transition: transform 2ms ease-in-out;
+    box-shadow: var(--shadow);
+    opacity: 0.7;
 }
 
 /* buttons */
 .btn-nav {
     background-color: var(--light);
     color: var(--very-dark-cyan);
+}
+
+.btn-nav:hover {
+    color: var(--grayish-blue);
 }
 
 .final .btn-hero {
@@ -114,14 +126,6 @@ ul {
     background-color: var(--very-pale-cyan);
     display: block;
     position: center top;
-}
-
-@media screen and (min-width: 768px) {
-    .landing-page {
-        background-size: cover;
-        background-image: url(/huddle/images/bg-hero-desktop.svg);
-        background-position: center;
-    }    
 }
 
 .landing-page .container {
@@ -151,14 +155,7 @@ ul {
 .nav-bar .logo {
     width: 110px;
 }
-
-@media screen and (max-width: 768px) {
-    .nav-bar {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-
+  
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -179,42 +176,6 @@ ul {
     object-fit: contain;
     margin-top: 60px;
     padding-bottom: 30px;
-}
-
-@media screen and (max-width: 768px) {
-    .hero-section {
-        flex-direction: row;
-        text-align: left;
-        margin-top: 30px;
-    }
-
-    .hero-img {
-        flex: 3;
-        padding-right: 20px;
-    }
-
-    .hero-txt {
-        flex: 2;
-        padding: 0 20px;
-    }
-
-    .hero-txt p {
-        font-size: 9px;
-        margin-bottom: 20px;
-        /* padding-top: 0; */
-    }
-
-    .hero-txt h1 {
-        font-size: 20px;
-        padding-bottom: 0;
-        margin-bottom: 15px;
-    }
-
-    .hero-section .btn.btn-hero {
-        font-size: 8px;
-        padding: 10px 30px;
-        
-    }
 }
 
 .cards-section {
@@ -245,58 +206,13 @@ ul {
     padding-bottom: 5px;
 }
 
-@media screen and (max-width: 768px) {
-    .cards-section{
-        padding-top: 100px;
-    }
-
-    .card {
-        flex-direction: row;
-        text-align: left;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #card2{
-        flex-direction: row-reverse;
-    }
-
-    .card-txt {
-        padding-left: 40px;
-        padding-right: 90px;
-        margin-top: 0;
-    }
-
-    #card2 .card-txt {
-        padding-left: 70px;
-        padding-right: 2px;
-    }
-
-    .card-txt h3 {
-        font-size: 15px;
-        margin-top: 0;
-    }
-
-    .card-txt p {
-        font-size: 10px;
-        margin-top: 8px;
-        line-height: 15px;
-        padding-bottom: 0;
-    }
-
-    .card-img {
-        width: 100%;
-    }
-}
-
-
 .final-section {
     padding: 50px 0;
 }
 
 .final-section .container {
     position: absolute;
-    margin-top: -60px;
+    margin-top: -55px;
     align-self: center;
     justify-self: center;
     width: 100%;
@@ -322,27 +238,6 @@ ul {
     margin-top: 30px;
     font-size: 17px;
     margin-bottom: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .final {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-top: 0;
-        padding-bottom: 0;
-        width: 60%;
-    }
-
-    .final h2 {
-        font-size: 18px;
-    }
-
-    .final .btn-hero {
-        padding: 15px 60px;
-        font-size: 10px;
-        margin-top: 0;
-        margin-bottom: 25px;
-    }
 }
 
 footer {
@@ -436,3 +331,177 @@ footer .container {
     font-size: 15px;
 }
 
+
+/* media queries for larger screen sizes */
+
+@media screen and (min-width: 550px) and (max-width: 1440px) {
+/* @media screen and (min-width: 500px) { */
+    .details {
+        flex-direction: row;
+    }
+    
+    .second-col,
+    .third-col,
+    .social-icons {
+        flex: 1;
+        margin-left: 40px;
+        margin-top: 60px;
+    }
+
+    .first-col {
+        flex: 2.5;
+        margin: 0;
+    }
+
+    .first-col .logo {
+        width: 62%
+    }
+
+    .location p,
+    .phone p,
+    .email p {
+        font-size: 60%;
+        margin-left: 5px;
+        padding-left: 0;
+    }
+
+    .location img,
+    .phone img,
+    .email img {
+        width: 4%;
+        margin-top: 3px;
+    }
+
+    .second-col,
+    .third-col {
+        font-size: 60%;
+    }
+
+    .copyright {
+        margin-top: 30px;
+        text-align: right;
+    }
+
+    .copyright small {
+        font-size: 30%
+    }
+
+    .fa-stack.small {
+        color: var(--very-pale-cyan);
+        font-size: 35%;
+        margin-top: 15px;
+    }
+
+    .cards-section{
+        padding-top: 100px;
+    }
+
+    .card {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    #card2{
+        flex-direction: row-reverse;
+    }
+
+    .card-txt {
+        padding-left: 40px;
+        padding-right: 90px;
+        margin-top: 0;
+    }
+
+    #card2 .card-txt {
+        padding-left: 70px;
+        padding-right: 2px;
+    }
+
+    .card-txt h3 {
+        font-size: 15px;
+        margin-top: 0;
+    }
+
+    .card-txt p {
+        font-size: 10px;
+        margin-top: 8px;
+        line-height: 15px;
+        padding-bottom: 0;
+    }
+
+    .card-img {
+        width: 100%;
+    }
+
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .hero-img {
+        flex: 3;
+        padding-right: 20px;
+    }
+
+    .hero-txt {
+        flex: 2;
+        padding: 0 20px;
+    }
+
+    .hero-txt p {
+        font-size: 9px;
+        margin-bottom: 20px;
+        /* padding-top: 0; */
+    }
+
+    .hero-txt h1 {
+        font-size: 20px;
+        padding-bottom: 0;
+        margin-bottom: 15px;
+    }
+
+    .hero-section .btn.btn-hero {
+        font-size: 8px;
+        padding: 10px 30px;
+    }
+
+    .nav-bar {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .landing-page {
+        background-size: cover;
+        background-image: url(/huddle/images/bg-hero-desktop.svg);
+        background-position: center;
+    }
+    
+    .btn-nav {
+        background-color: var(--light);
+        font-size: 9px;
+        padding: 5px 30px;
+    }
+    
+    .final {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 50%;
+    }
+
+    .final h2 {
+        font-size: 18px;
+    }
+
+    .final .btn-hero {
+        padding: 15px 60px;
+        font-size: 10px;
+        margin-top: 0;
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+}
